@@ -1,0 +1,20 @@
+{# empty Twig template #}
+<h1>Activitiy Streams</h1>
+<table>
+    <tr>
+        <th>When did it</th>
+        <th>Who did it</th>
+        <th>What they did</th>
+        <th>Link</th>
+    </tr>
+    {% for key, stream in ActivityStreams %}
+        <tr>
+          <td>{{ stream.whenDidIt|date('Y-m-d H:i:s') }}</td>
+          <td>{{ stream.whoDidIt|e }}</td>
+          <td>{{ stream.whatTheyDid|e }}</td>
+          <td><a href="{{ url(stream.getEntityRouteName, {'id': stream.getEntityId})}}">Link</a></td>
+        </tr>
+    {% endfor %}
+</table>
+
+<a href="/">To Home</a>

@@ -1,0 +1,11 @@
+ora_activity_stream_recipe:
+    type: rest
+    prefix: /v1
+    resource: ORA\ActivityStreamBundle\Controller\RecipeController
+    name_prefix:  api_1_ # naming collision
+    
+ora_activity_stream:
+    type: rest
+    prefix: /v1
+    resource: ORA\ActivityStreamBundle\Controller\ActivityStreamController
+    name_prefix:  api_1_ # naming collision

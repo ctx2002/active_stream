@@ -1,0 +1,7 @@
+{% block content %}
+    <h1>Edit Recipe</h1>
+    <form action="{{ url('api_1_put_recipe',{'id' : form.vars.value.id }) }}?_method=PUT" method="POST" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <input type="submit" value="Submit" />
+    </form>
+{% endblock %}
