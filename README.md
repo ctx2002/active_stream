@@ -67,3 +67,24 @@ Enjoy!
 [11]: http://symfony.com/doc/2.6/cookbook/logging/monolog.html
 [12]: http://symfony.com/doc/2.6/cookbook/assetic/asset_management.html
 [13]: http://symfony.com/doc/2.6/bundles/SensioGeneratorBundle/index.html
+
+
+gGo to {yourlocalhost}/api/doc to see api doc.
+
+
+Before to run this application, do following:
+
+0> go to document root
+
+ 1> php app/console doctrine:database:create
+ 2> php app/console doctrine:schema:update --force
+3> php app/console fos:user:create testuser test@example.com p@ssword
+
+step 3 created a user called "testuser" and password is "p@ssword"
+
+4> go to {yourlocalhost}/, and log into site.
+
+after logged into app, you will see 2 options, "create a recipe" , "Show activity streams"
+
+create a recipe allows a user to create a recipe, it is REST based.
+"Show activity streams" will show activities.
